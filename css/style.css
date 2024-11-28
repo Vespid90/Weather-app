@@ -13,6 +13,7 @@ body {
 .main-container {
   text-align: center;
   padding: 20px;
+  width: 40%;
 }
 
 .h2 {
@@ -56,7 +57,7 @@ body {
 
 .weather-app__current {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 #current-weather {
@@ -73,7 +74,7 @@ body {
 .weather-app__current-temperature {
   font-size: 4rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 0.7rem;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -84,9 +85,10 @@ body {
 }
 
 #current-weather-icon {
-  width: 50%;
+  height: 4rem;
+  width: 4rem;
   margin-left: 1rem;
-  margin-right: 0;
+  margin-right: 1rem;
 }
 
 .weather-app__description {
@@ -103,11 +105,11 @@ body {
 }
 
 .weather-app__forecast {
-  margin-top: 10px;
+  margin-top: 0.7rem;
 }
 
 .weather-app__forecast-title {
-  font-size: 20px;
+  font-size: 1.2rem;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -120,7 +122,7 @@ body {
 .weather-app__forecast-item {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 0.7rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   align-items: center;
   margin-bottom: 5px;
@@ -146,7 +148,7 @@ body {
 
 .forecast-icon {
   width: 30px;
-  height: 50px;
+  height: 30px;
   margin-right: 2rem;
 }
 

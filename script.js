@@ -61,7 +61,7 @@ async function listCities(query) {
 async function getWeather(query) {
     try {
         const response = await fetch(
-            `${weatherCity.API_URL}?q=${query}&appid=${weatherCity.API_KEY}&units=${weatherCity.units}`
+            `${weatherCity.API_URL}?q=${query}&appid=${weatherCity.API_KEY}&units=${weatherCity.units}&lang=fr`
         );
 
         if (!response.ok) {
@@ -93,8 +93,6 @@ function displayWeather(weather) {
     const currentIconCode = weather.list[0].weather[0].icon;
     const currentIconUrl = `https://openweathermap.org/img/wn/${currentIconCode}@2x.png`;
     currentWeatherIcon.src = currentIconUrl;
-    currentWeatherIcon.style.width = "50%";
-    currentWeatherIcon.style.marginLeft = "1rem";
 
     const forecastByDay = groupForecastByDay(weather.list);
 
@@ -164,7 +162,7 @@ cityInput.addEventListener("keyup", async (event) => {
 //event pour valider la la saisie par la touche Enter
 cityInput.addEventListener("keydown", async (event) => {
     if (event.key === "Enter") {
-        //la méthode .trim() sert à enlever les espace après une chaine de caractères
+        //la méthode .trim() sert à enlever les espace avant/après une chaine de caractères
         const query = cityInput.value.trim();
         if (query) {
             const weather = await getWeather(query);
