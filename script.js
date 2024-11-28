@@ -1,3 +1,6 @@
+//voir pour pouvoir utiliser le .env?
+
+
 // import dotenv from "dotenv";
 // dotenv.config();
 
@@ -47,16 +50,6 @@ async function listCities(query) {
     }
 }
 
-//permet de réinitialiser la page afin de ne rien faire apparaitre avant l'encodage d'une ville
- function clearWeatherDisplay() {
-    currentTemp.textContent ="";
-    currentDesc.textContent ="";
-    currentLocation.textContent ="";
-    currentWeatherIcon.src = "";
-    currentWeatherIcon.alt = "";
-    forecastList.innerHTML = "";
- }
-
 //fonction pour fetch les données météo
 async function getWeather(query) {
     try {
@@ -87,12 +80,13 @@ function displayCities(cities) {
 //météo actuelle
 function displayWeather(weather) {
     currentTemp.textContent = `${Math.round(weather.list[0].main.temp)}°C`;
-    currentDesc.textContent = weather.list[0].weather[0].description;
+    currentDesc.textContent = weather.list[0].weather[0].description.charAt(0).toUpperCase() + weather.list[0].weather[0].description.slice(1);
     currentLocation.textContent = weather.city.name;
 
     const currentIconCode = weather.list[0].weather[0].icon;
     const currentIconUrl = `https://openweathermap.org/img/wn/${currentIconCode}@2x.png`;
     currentWeatherIcon.src = currentIconUrl;
+    currentWeatherIcon.style.display = "block";
 
     const forecastByDay = groupForecastByDay(weather.list);
 
@@ -103,7 +97,7 @@ function displayWeather(weather) {
         li.classList.add("forecast-item");
 
         const date = new Date(dayForecast.date);
-        const dayName = date.toLocaleDateString("fr-FR", { weekday: "long" });
+        const dayName = date.toLocaleDateString("fr-FR", { weekday: "short" });
         const formattedDate = date.toLocaleDateString("fr-FR", { day: "2-digit", month: "2-digit" });
 
         const minTemp = Math.min(...dayForecast.temps);
@@ -115,13 +109,12 @@ function displayWeather(weather) {
         li.innerHTML = `
             <span class="forecast-date">${dayName} - ${formattedDate}</span>
             <span class="forecast-temps">${Math.round(minTemp)}°C / ${Math.round(maxTemp)}°C</span>
-            <img src="${iconUrl}" alt="${dayForecast.weather[0].description}" class="forecast-icon">
-        `;
+            <img src="${iconUrl}" alt="${dayForecast.weather[0].description}" class="forecast-icon">`;
 
         forecastList.appendChild(li);
     }
     );
-    const titleH3 = forecastTitle.textContent = "Prévision sur 5 jours"
+    const titleH3 = forecastTitle.textContent = "Prévision pour les 5 prochains jours"
     forecastTitle.appendChild(titleH3);
 }
 
@@ -144,10 +137,6 @@ function groupForecastByDay(forecastList) {
 
 
 //les divers events
-//sert à clear l'interface
-window.addEventListener("DOMContentLoaded", () => {
-    clearWeatherDisplay();
-});
 
 //event qui filtre la liste lors de l'input client
 cityInput.addEventListener("keyup", async (event) => {

@@ -69,6 +69,7 @@ body {
 .weather-app__current-temp-icon {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .weather-app__current-temperature {
@@ -85,15 +86,17 @@ body {
 }
 
 #current-weather-icon {
-  height: 4rem;
-  width: 4rem;
+  height: 103px;
+  width: 103px;
   margin-left: 1rem;
   margin-right: 1rem;
+  display: none;
+  padding-top: 1rem;
 }
 
 .weather-app__description {
   font-size: 1.5rem;
-  color: #ddd;
+  color: #ffffff;
   margin-left: 2rem;
 }
 
@@ -152,10 +155,9 @@ body {
   margin-right: 2rem;
 }
 
-.forecast-temp {
+.forecast-temps {
   font-size: 1rem;
   font-weight: bold;
-  margin-right: 2rem;
 }
 
 .forecast-date {
@@ -164,6 +166,7 @@ body {
   font-size: 16px;
   font-weight: bold;
   margin-left: 2rem;
+  text-transform: capitalize;
 }
 
 .forecast-item {
