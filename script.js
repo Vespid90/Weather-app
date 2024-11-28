@@ -28,6 +28,7 @@ const currentLocation = document.getElementById("current-location");
 const currentWeatherIcon = document.getElementById("current-weather-icon");
 const forecastTitle = document.getElementById("forecast-title");
 const forecastList = document.getElementById("forecast-list");
+const mainContainer = document.getElementById("app-weather");
 
 
 
@@ -152,6 +153,7 @@ cityInput.addEventListener("keyup", async (event) => {
 cityInput.addEventListener("keydown", async (event) => {
     if (event.key === "Enter") {
         //la méthode .trim() sert à enlever les espace avant/après une chaine de caractères
+        mainContainer.style.display = "block";
         const query = cityInput.value.trim();
         if (query) {
             const weather = await getWeather(query);
@@ -164,6 +166,7 @@ cityInput.addEventListener("keydown", async (event) => {
 
 //event qui affiche ka météo en cliquant sur le bouton
 btnClick.addEventListener("click", async () => {
+    mainContainer.style.display = "block";
     const query = cityInput.value.trim();
     if (query) {
         const weather = await getWeather(query);

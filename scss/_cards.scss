@@ -4,6 +4,7 @@
   border-style: solid;
   border-radius: 25px;
   background-color: #b666d2;
+  display: none;
 }
 
 .weather-app__current {
@@ -109,7 +110,6 @@
 .forecast-temps {
   font-size: 1rem;
   font-weight: bold;
-  //text-align: right;
 }
 
 

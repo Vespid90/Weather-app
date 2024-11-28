@@ -27,7 +27,7 @@ body {
 }
 
 .dropdown__content--input {
-  padding: 10px;
+  padding: 12.5px;
   border: none;
   border-radius: 8px;
   font-size: 16px;
@@ -53,6 +53,7 @@ body {
   border-style: solid;
   border-radius: 25px;
   background-color: #b666d2;
+  display: none;
 }
 
 .weather-app__current {
