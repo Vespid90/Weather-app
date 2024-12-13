@@ -80,4 +80,4 @@ Voici quelques idées pour améliorer l'application :
 
 ---
 
-Merci d'avoir exploré ce projet ! Si vous avez des questions ou des suggestions, n'hésitez pas à ouvrir une issue ou à me contacter.
+Merci d'avoir exploré ce projet ! Si vous avez des questions ou des suggestions, n'hésitez pas à me contacter.
