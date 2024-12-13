@@ -1,46 +1,83 @@
-# The Weather Application
+# Weather App
 
+Bienvenue sur le projet **Weather App** ! Ce projet est une application web simple permettant aux utilisateurs de consulter les conditions météorologiques d'une ville grâce à une API météo.
 
--   Repository: `weather-app`
--   Type of Challenge: `Consolidation`
--   Duration: `4 days`
--   Deployment strategy: `Github pages`
--   Team challenge : `solo`
--   Submission form: wip
+## Fonctionnalités
 
+- Recherche de la météo en temps réel pour une ville.
+- Affichage des informations principales comme :
+  - Température actuelle.
 
-## Mission objectives
+  - Conditions météorologiques (ensoleillé, nuageux, pluvieux, etc.).
 
-In this challenge you will use and consolidate your knowledge on:
+  - Prévisualisation sur les 5 prochains jours
+- Interface utilisateur intuitive et réactive.
 
--   A typical HTTP flow: send asynchronous requests to a remote server and process the results
--   DOM manipulation: changing the DOM based on the results of the HTTP requests
--   Learn to aggregate and parse data fetched from an api
+## Technologies utilisées
 
-## The Mission
+- **HTML/CSS/JavaScript** : Structure et style de l'application.
+- **API OpenWeatherMap** : Récupération des données météorologiques.
+- **Framework (si applicable)** : Détaillez ici si vous utilisez un framework comme React, Vue, etc.
 
-You have been sent abroad for a 10-month work mission. Your family and friends back home ask you about the weather where you live ALL. THE. TIME.  
-Enough is enough, you decide to build a small web application for them so that you can free your time to talk about more interesting topics.
+## Prérequis
 
-### Specifications
+Avant de commencer, assurez-vous d'avoir les éléments suivants installés sur votre machine :
 
-#### 🌱 Must haves
+- [Node.js](https://nodejs.org/) et npm (si vous utilisez des outils de gestion de packages).
+- Un navigateur web moderne (Chrome, Firefox, Edge).
 
--   In the home page the user can enter the city of their choice (think of the right HTML elements here)
--   Typing into the search input will provide maximum 10 examples of existing cities (in a drop-down menu below the input) ( you'll need an API for this)
--   On clicking the SUBMIT button or pressing ENTER the application will display the weather for the next 5 days
-> 💡 Not sure where to start? Split this features into multiple smaller todos (in your code, sketch, ...)
-s
-#### 🌼 Nice to haves (in no specific order)
+## Installation
 
--   Remember the user choice on previous visits
--   Allow the user to compare the weather in multiple cities simultaneously
--   Use the API of https://unsplash.com/ to show a photo of the city they entered in the form.
--   Display a line graph of temperature over time using a library such as [Chart.js](https://www.chartjs.org)
+1. Clonez le dépôt sur votre machine locale :
 
-### Instructions
+   ```bash
+   git clone https://github.com/Vespid90/Weather-app.git
+   ```
 
--   Create an account on [OpenWeather](https://home.openweathermap.org/), and generate a key
--   Get the weather data using the native JS [`fetch()`](https://devdocs.io/dom/fetch_api/using_fetch) method.
+2. Accédez au répertoire du projet :
 
-![](./american-storm.gif)
+   ```bash
+   cd Weather-app
+   ```
+
+3. Installez les dépendances (si applicables) :
+
+   ```bash
+   npm install
+   ```
+
+4. Lancez l'application :
+
+   ```bash
+   Depuis le fichier Home.html, lancer la visualisation sur votre navigateur
+   ```
+
+## Utilisation
+
+1. Entrez le nom d'une ville dans la barre de recherche.
+2. Cliquez sur le bouton "Rechercher".
+3. Consultez les informations météorologiques affichées sur l'écran.
+
+## Détails techniques
+
+- **Appels API** :
+
+  - URL de l'API OpenWeatherMap : [https://openweathermap.org/api](https://openweathermap.org/api)
+  - Clé API nécessaire pour les requêtes&#x20;
+
+- **Structure du projet** :
+
+  - `Home.html` : Page principale de l'application.
+  - `styles.css` : Feuille de style pour l'interface utilisateur.
+  - `script.js` : Logique principale pour les appels API et la mise à jour de l'interface utilisateur.
+
+## Améliorations possibles
+
+Voici quelques idées pour améliorer l'application :
+
+- Intégrer une carte interactive pour afficher la localisation.
+- Ajouter des animations ou des transitions pour améliorer l'expérience utilisateur.
+
+---
+
+Merci d'avoir exploré ce projet ! Si vous avez des questions ou des suggestions, n'hésitez pas à ouvrir une issue ou à me contacter.
