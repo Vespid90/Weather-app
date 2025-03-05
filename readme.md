@@ -23,7 +23,7 @@ Bienvenue sur le projet **Weather App** ! Ce projet est une application web simp
 
 Avant de commencer, assurez-vous d'avoir les éléments suivants installés sur votre machine :
 
-- [Node.js](https://nodejs.org/) et npm (si vous utilisez des outils de gestion de packages).
+- [Node.js](https://nodejs.org/) et npm.
 - Un navigateur web moderne (Chrome, Firefox, Edge).
 
 ## Installation
